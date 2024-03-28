@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+  <script src="https://kit.fontawesome.com/9c9e39d642.js" crossorigin="anonymous"></script>
+  <style>
+        .toggle {
+      --width: 80px;
+      --height: calc(var(--width) / 3);
+
+      position: relative;
+      display: inline-block;
+      width: var(--width);
+      height: var(--height);
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+      border-radius: var(--height);
+      cursor: pointer;
+    }
+
+    .toggle input {
+      display: none;
+    }
+
+    .toggle .slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--height);
+      background-color: #ccc;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .toggle .slider::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(var(--height));
+      height: calc(var(--height));
+      border-radius: calc(var(--height) / 2);
+      background-color: #fff;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s ease-in-out;
+    }
+
+    .toggle input:checked+.slider {
+      background-color: #2196F3;
+    }
+
+    .toggle input:checked+.slider::before {
+      transform: translateX(calc(var(--width) - var(--height)));
+    }
+  </style>
+</head>
+
+
+  <div class='dashboard'>
+    <div class="dashboard-nav">
+      <header>
+        <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+        <a href="#" class="brand-logo"><i class="fas fa-anchor"></i> <span>RbxMarket</span></a>
+      </header>
+      <nav class="dashboard-nav-list">
+       
+        <a href="#" class="dashboard-nav-item active"><i class="fas fa-shop"></i>Sellers Dashboard</a>
+        
+        <div class="nav-item-divider"></div>
+        <a href="#" class="dashboard-nav-item"><i class="fas fa-sign-out-alt"></i> Logout </a>
+                <a href="#" class="dashboard-nav-item active"><i class="fas fa-brands fa-stack-exchange"></i> Go Back </a>
+      </nav>
+    </div>
+    <div class='dashboard-app'>
+<div class='dashboard-toolbar'>
+  <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+  <div class="buttons-container">
+    <div class="button blue-button" onclick="window.location.href='/login'">Login</div>
+    <div class="button blue-button" onclick="window.location.href='/signup'">Signup</div>
+  
+  </div>
+</div>
+      <div class='dashboard-content'>
+   
+
+      <div class="row">
+
+<!-- Start card 1 -->
+<div class="col-xl-6 col-lg-5">
+    <div class="card" style="background-color: #2a2a26; color:white;">
+        <div class="card-body">
+            <h5 class="fw-semibold mb-3 fs-5">Submit Stock Account</h5>
+            <form>
+                <div class="mb-3">
+                    <label for="form_roblox_userid" class="form-label">Roblox User ID</label>
+                    <input type="number" step="1" class="form-control" id="form_roblox_userid" placeholder="1234567890">
+                </div>
+                <div class="mb-3">
+                    <label for="form_account_cookie" class="form-label">Roblox Account Cookie</label>
+                    <input type="text" class="form-control" id="form_account_cookie" placeholder="_|WARNING:-...">
+                  
+                </div>
+             
+                <div id="additional_options_limiteds" style="display: none;">
+                    <div class="mb-3">
+                        <label for="form_account_2fa_code" class="form-label">Roblox Account 2FA Manual Entry Key</label>
+                        <input type="text" class="form-control" id="form_account_2fa_code" placeholder="ABCDEFGHIJKLMNOPQRSTUVWXYZ">
+                    </div>
+                    <div class="mb-3">
+                        <label for="form_account_otp_code" class="form-label">Roblox Account 6-Digit OTP Code</label>
+                        <input type="number" step="1" class="form-control" id="form_account_otp_code" placeholder="123456">
+                    </div>
+                </div>
+                <div class="mb-3">
+    <label for="form_sell_robux" class="form-label">Sell Robux</label>
+    <div class="d-flex align-items-center">
+     
+        <label class="toggle">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+</div>
+
+                <button class="btn btn-dark">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- End card 1 -->
+
+
+<!-- End card 1 -->
+
+<!-- Card 3 -->
+<div class="col-xl-6 col-lg-7">
+    <div class="card" style="background-color: #2a2a26; color:white;
+">
+        <div class="card-body" >
+            <div class="mb-2">
+                <h5 class="fw-semibold mb-0 fs-5">Your Stock Accounts</h5>
+            </div>
+            <p class="text-muted">No listed accounts found.</p>
+           
+        </div>
+    </div>
+</div>
+<!-- End Card 3 -->
+
+<!-- Card 2 -->
+<div class="col-xl-6 col-lg-5 ">
+    <div class="card " style="background-color: #2a2a26; color:white;
+">
+        <div class="card-body " >
+            <div class="mb-2">
+                <h5 class="fw-semibold mb-0 fs-5">Intergrations</h5>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="border-end pe-4 border-muted border-opacity-10"></div>
+            </div>
+            <div class="d-flex align-items-center">
+                <a href="/dash/paypal"><button class="btn btn-primary">PayPal Settings</button></a>
+                <a href="/dash/stripe"><button class="btn btn-secondary ms-2">Stripe Settings</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Card 2 -->
+
+
+
+      <!-- Include Bootstrap CSS and JS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+<script>
+  let container = document.querySelector('.slider-container');
+  let items = document.querySelectorAll('.slider-item');
+  let currentIndex = 0;
+
+  document.addEventListener('mousedown', startDrag);
+  document.addEventListener('mouseup', endDrag);
+  document.addEventListener('mousemove', drag);
+
+  function startDrag(e) {
+    startX = e.clientX;
+    isDragging = true;
+  }
+
+  function endDrag() {
+    isDragging = false;
+  }
+
+  function drag(e) {
+    if (!isDragging) return;
+
+    const distance = e.clientX - startX;
+    container.scrollLeft -= distance;
+
+    startX = e.clientX;
+  }
+
+  function showNextItem() {
+    if (currentIndex < items.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+
+    let translateValue = -currentIndex * items[0].offsetWidth;
+    container.style.transform = `translateX(${translateValue}px)`;
+  }
+
+
+  // You can set an interval to automatically slide to the next item
+  // setInterval(showNextItem, 2000); // Change the interval time as needed
+</script>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
